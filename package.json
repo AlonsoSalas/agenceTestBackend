@@ -2,10 +2,12 @@
   "name": "api",
   "version": "1.0.0",
   "description": "api rest for test",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon source/app.js --exec babel-node --presets es2015,stage-2"
+    "start": "nodemon source/app.js --exec babel-node --presets es2015,stage-2",
+    "build": "babel source -d dist --presets es2015,stage-2",
+    "serve": "node dist/app.js"
   },
   "author": "Alonso Salas",
   "license": "ISC",
@@ -25,7 +27,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.11.0",
     "nodemon": "^1.12.1"
