@@ -5,7 +5,7 @@ import Bill from '../models/Bills';
 import Salary from '../models/Salaries';
 import database from '../config/db';
 import moment from 'moment';
-import "babel/polyfill";
+import "babel-polyfill";
 
 class ConsultantsController {
 

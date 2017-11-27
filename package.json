@@ -37,6 +37,7 @@
     "nodemon": "^1.12.1"
   },
   "dependencies": {
+    "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
