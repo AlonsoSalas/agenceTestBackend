@@ -1,34 +1,30 @@
-"use strict";
+'use strict';
 
-var _express = require("express");
+var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
-var _bodyParser = require("body-parser");
+var _bodyParser = require('body-parser');
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-var _dotenv = require("dotenv");
+var _dotenv = require('dotenv');
 
 var _dotenv2 = _interopRequireDefault(_dotenv);
 
-var _db = require("./config/db");
+var _db = require('./config/db');
 
 var _db2 = _interopRequireDefault(_db);
 
-var _config = require("./config/config");
+var _config = require('./config/config');
 
 var _config2 = _interopRequireDefault(_config);
 
-var _routes = require("./routes/");
+var _routes = require('./routes/');
 
 var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-require("babel-core/register");
-require("babel-polyfill");
-
 
 var app = (0, _express2.default)();
 var port = process.env.PORT || 8000;
@@ -71,7 +67,7 @@ _db2.default.sequelize.authenticate().then(function () {
 
     app.listen(port);
 
-    console.info("sever running on port " + port);
+    console.info('sever running on port ' + port);
 }).catch(function (err) {
     console.error('Unable to connect to the database:', err);
 });
